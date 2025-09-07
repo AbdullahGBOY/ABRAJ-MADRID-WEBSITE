@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>معرض الصور — Abraj Madrid</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="gallery.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="gallery-page">
+  <!-- رأس بسيط بنفس ستايل الموقع -->
+  <header id="navbar">
+    <div class="container">
+      <div class="logo">
+        <img src="LOGO.png" alt="Abraj Madrid logo"/>
+      </div>
+      <nav>
+        <a href="index.html" class="cta">العودة للرئيسية</a>
+      </nav>
+      <div style="width:40px"></div>
+    </div>
+  </header>
+
+  <main class="gallery-main">
+    <section class="hero hero-compact">
+      <div class="hero-inner">
+        <h1>معرض الصور</h1>
+        <p class="lead">آخر المنشورات من فيسبوك وإنستغرام</p>
+      </div>
+    </section>
+
+    <!-- كروت المتابعة السريعة -->
+    <section class="follow-cards container">
+      <a class="follow-card glow-box" href="https://www.instagram.com/abrajmadrid/" target="_blank" rel="noopener">
+        <i class="fab fa-instagram"></i>
+        <div>
+          <strong>تابعنا على إنستغرام</strong>
+          <span>@abrajmadrid</span>
+        </div>
+      </a>
+      <a class="follow-card glow-box" href="https://www.facebook.com/profile.php?id=61577906522560" target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+        <div>
+          <strong>تابعنا على فيسبوك</strong>
+          <span>Abraj Madrid</span>
+        </div>
+      </a>
+    </section>
+
+    <!-- شبكة البوستات (حتى 8) -->
+    <section class="container">
+      <div id="embed-grid" class="embed-grid"></div>
+      <div id="no-posts" class="no-posts" hidden>لا توجد بوستات مضافة حالياً — سيتم عرضها هنا تلقائياً عند إضافة الروابط في <code>gallery.js</code>.</div>
+    </section>
+
+    <!-- Facebook Page plugin (يعرض آخر المنشورات تلقائياً) -->
+    <section class="container page-plugin">
+      <h2>آخر منشورات فيسبوك</h2>
+      <div class="glow-box fb-wrap">
+        <div class="fb-page"
+             data-href="https://www.facebook.com/profile.php?id=61577906522560"
+             data-tabs="timeline"
+             data-width="500"
+             data-height=""
+             data-small-header="false"
+             data-adapt-container-width="true"
+             data-hide-cover="false"
+             data-show-facepile="true">
+          <blockquote cite="https://www.facebook.com/profile.php?id=61577906522560" class="fb-xfbml-parse-ignore">
+            <a href="https://www.facebook.com/profile.php?id=61577906522560">Abraj Madrid</a>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>© Abraj Madrid — أبراج مدريد</div>
+      <div class="socials">
+        <a href="https://www.facebook.com/profile.php?id=61577906522560" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/abrajmadrid/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/9647710597742" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://wa.me/9647760500035" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SDKs للـ embeds -->
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/ar_AR/sdk.js#xfbml=1&version=v20.0"></script>
+  <script async src="https://www.instagram.com/embed.js"></script>
+
+  <script src="gallery.js"></script>
+</body>
+</html>
